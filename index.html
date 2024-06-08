@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Survey</h1>
+        <form id="surveyForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <div class="question">
+                <p>1. Do you like coffee?</p>
+                <input type="radio" id="q1_yes" name="q1" value="Yes" required>
+                <label for="q1_yes">Yes</label>
+                <input type="radio" id="q1_no" name="q1" value="No">
+                <label for="q1_no">No</label>
+            </div>
+            <!-- Add more questions here -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
