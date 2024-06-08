@@ -2,7 +2,7 @@ document.getElementById('passwordForm').addEventListener('submit', function(even
     event.preventDefault();
 
     const password = document.getElementById('password').value;
-    if (password === 'yourSecretPassword') { // Change 'yourSecretPassword' to your desired password
+    if (password === '1459') { // Change 'yourSecretPassword' to your desired password
         displayResults();
     } else {
         alert('Incorrect password');
@@ -13,6 +13,7 @@ function displayResults() {
     const results = JSON.parse(localStorage.getItem('surveyResults')) || [];
     const resultsList = document.getElementById('resultsList');
 
+    resultsList.innerHTML = ''; // Clear previous results
     results.forEach(result => {
         const resultItem = document.createElement('li');
         resultItem.textContent = `Username: ${result.username}, Answers: ${JSON.stringify(result.answers)}`;
